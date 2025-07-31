@@ -6,19 +6,6 @@ import axios from "axios";
 import WeatherCard from "./Components/weather";
 
 const App = () => {
-
-  //input
-   const [inputValue, setInputValue] = useState('');
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      setInputValue('');
-    }
-  };
-  const handleChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  //axios
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState("");
@@ -61,7 +48,6 @@ const App = () => {
             className="weather-input"
             type="text"
             placeholder="Enter your city name..."
-            onKeyPress={handleKeyPress}
             value={city}
             onChange={(e) => setCity(e.target.value)}
             onKeyDown={(e) => {
@@ -69,7 +55,7 @@ const App = () => {
             }
         }
           />
-          <button onKeyDown={handleChange} className="weather-btn" onClick={fetchWeather}>
+          <button className="weather-btn" onClick={fetchWeather}>
             Search
           </button>
         </div>
