@@ -62,14 +62,14 @@ const App = () => {
             type="text"
             placeholder="Enter your city name..."
             onKeyPress={handleKeyPress}
-            value={city}, {inputValue}
+            value={city}
             onChange={(e) => setCity(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter") fetchWeather();
-            }, {handleChange}
+            }
         }
           />
-          <button className="weather-btn" onClick={fetchWeather}>
+          <button onKeyDown={handleChange} className="weather-btn" onClick={fetchWeather}>
             Search
           </button>
         </div>
