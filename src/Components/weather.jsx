@@ -36,7 +36,7 @@ const WeatherCard = ({ weather }) => {
         <div className="weather-welcome-icon">🌤️</div>
         <div className="weather-welcome-title">Welcome!</div>
         <div className="weather-welcome-desc">
-          Enter a city to get the latest weather update.
+          Enter a city to get <br/> the latest weather update.
         </div>
       </div>
     );

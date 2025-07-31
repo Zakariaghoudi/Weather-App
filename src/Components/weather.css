@@ -78,7 +78,8 @@
   margin-bottom: 6px;
 }
 .weather-welcome-desc {
-  font-size: 18px;
+  text-align: center;
+  font-size: 15px;
 }
 .container {
   font-size: 32px;
